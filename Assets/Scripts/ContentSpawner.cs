@@ -3,26 +3,33 @@ using UnityEngine;
 
 namespace Fleming.Assets.Scripts
 {
-    public class ScrollContent : MonoBehaviour
+    public class ContentSpawner : MonoBehaviour
     {
-
-        //the runtime list of spawned objects
-        public List<GameObject> LiveContent = new List<GameObject>();
-
         [Header("Dimensions")]
         [Tooltip("The width of the items you have in the scroll view.")]
         public float ItemWidth;
-        [SerializeField]
-        private float spacing;
+
+        [Tooltip("The amount of space between cards.")]
+        public float Spacing;
+
+        public float Width
+        {
+            get;
+            set;
+        }
 
         [Header("Prefabs")]
         //the list of prefabs we'll spawn
         [SerializeField] private List<GameObject> prefabs;
 
-        
-
+        /// <summary>
+        /// Used for setting the initial positions of the cards.
+        /// </summary>
         void Start()
         {
+            //set our width
+            Width = GetComponent<RectTransform>().rect.width;
+
             for (int i = 0; i < prefabs.Count; i++)
             {
                 GameObject obj = Instantiate(prefabs[i], transform);
@@ -41,26 +48,8 @@ namespace Fleming.Assets.Scripts
                 rt.pivot = new Vector2(0, 0.5f);
 
                 //set calculated position based on content width and spacing
-                rt.anchoredPosition = new Vector2(i * (ItemWidth+spacing), 0);
-
-                //grab the GameObject for the runtime list
-                LiveContent.Add(obj);
+                rt.anchoredPosition = new Vector2(i * (ItemWidth+Spacing), 0);
             }
-
-            //split the list in half and put half of that on the left side (negative x)
-            //int splitAmount = LiveContent.Count / 2 / 2;
-            //for (int i = LiveContent.Count - 1; i > LiveContent.Count - splitAmount - 1; i--)
-            //{
-            //    //save the transform
-            //    GameObject objToMove = LiveContent[i];
-
-            //    //get rid of it
-            //    LiveContent.RemoveAt(i);
-
-            //    //move it to the front
-            //    LiveContent.Insert(0, objToMove);
-            //}
-
         }
 
         /// <summary>

@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,21 +9,21 @@ namespace Fleming.Assets.Scripts
         /// The script that handles the spawning of content.
         /// </summary>
         [SerializeField]
-        private ContentSpawner _contentSpawner;
+        private ContentSpawner contentSpawner;
 
         /// <summary>
-        /// How far an item can go before being repositioned to the left or right
+        /// How far an item can go before being repositioned to the left or right.
         /// dependent on scroll direction.
         /// </summary>
         [SerializeField] private float boundsThreshold;
 
         /// <summary>
-        /// Used for keeping track of the last place the user dragged. Mainly used for calculating rightDrag
+        /// Used for keeping track of the last place the user dragged. Mainly used for calculating rightDrag.
         /// </summary>
         [SerializeField] private Vector2 lastDragPosition;
 
         /// <summary>
-        /// Whether the user is dragging right or not
+        /// Whether the user is dragging right or not.
         /// </summary>
         [SerializeField] private bool rightDrag;
 
@@ -59,8 +58,8 @@ namespace Fleming.Assets.Scripts
         }
 
         /// <summary>
-        /// Called when OnValueChanged is invoked on the ScrollRect component. We base the
-        /// scrollAmount off of the localPosition change of the contentHolder
+        /// Called when OnValueChanged is invoked on the ScrollRect component. This allows
+        /// us to change card positions whenever the ScrollRect is scrolled in any way, via drag or scroll wheel.
         /// </summary>
         /// <param name="position"></param>
         public void UpdateScrollAmount(Vector2 position)
@@ -71,14 +70,14 @@ namespace Fleming.Assets.Scripts
             //we can use it as a list to keep track of the order of items,
             //in this way we know what item is the "front" and the "end".
             //we get the childCount here so that we know our upper bounds of the list.
-            int scrollContentChildCount = _contentSpawner.transform.childCount;
+            int scrollContentChildCount = contentSpawner.transform.childCount;
 
             //we need to get the index of the child we want to check the bounds for.
             //this item would be at the "front" of the side the items are moving towards.
-            //if rightDrag is true, items are moving right, so we want to check the right most "front" item against the bounds
+            //if rightDrag is true, items are moving right, so we want to check the right most "front" item against the bounds,
             //otherwise we want to check the left most "front" item against the bounds, since items would be moving left.
             int frontItemIndex = rightDrag ? scrollContentChildCount - 1 : 0;
-            Transform frontItem = _contentSpawner.transform.GetChild(frontItemIndex);
+            Transform frontItem = contentSpawner.transform.GetChild(frontItemIndex);
 
             //if the "front" item isn't out of bounds, then we're good, we can break out
             if (OutsideBounds(frontItem) == false)
@@ -92,7 +91,7 @@ namespace Fleming.Assets.Scripts
             //if we're dragging right, the "end" item is on the left, so grab index 0
             //otherwise grab the last index
             int endItemIndex = rightDrag ? 0 : scrollContentChildCount - 1;
-            Transform endItem = _contentSpawner.transform.GetChild(endItemIndex);
+            Transform endItem = contentSpawner.transform.GetChild(endItemIndex);
 
             //we need to create the new position this item is going to exist at.
             //we'll start with the "end" item position
@@ -101,12 +100,12 @@ namespace Fleming.Assets.Scripts
             //if we're dragging right, we need to position left of the "end" item on the left
             if (rightDrag)
             {
-                newPositionForItem.x = endItem.position.x - _contentSpawner.ItemWidth * 2 - _contentSpawner.Spacing * 2;
+                newPositionForItem.x = endItem.position.x - contentSpawner.ItemWidth * 2 - contentSpawner.Spacing * 2;
             }
             else
             //if we're dragging left, we need to position right of the "end" item on the right
             {
-                newPositionForItem.x = endItem.position.x + _contentSpawner.ItemWidth * 2 + _contentSpawner.Spacing * 2;
+                newPositionForItem.x = endItem.position.x + contentSpawner.ItemWidth * 2 + contentSpawner.Spacing * 2;
             }
 
             //set the "front" item to its new position at the "end"
@@ -125,19 +124,19 @@ namespace Fleming.Assets.Scripts
         private bool OutsideBounds(Transform t)
         {
             //the positive threshold is our current position + half the width + the threshold
-            float positiveThreshold = transform.position.x + _contentSpawner.Width * 0.5f + boundsThreshold;
+            float positiveThreshold = transform.position.x + contentSpawner.Width * 0.5f + boundsThreshold;
 
             //the negative threshold is our current position - half the width - the threshold
-            float negativeThreshold = transform.position.x - _contentSpawner.Width * 0.5f - boundsThreshold;
+            float negativeThreshold = transform.position.x - contentSpawner.Width * 0.5f - boundsThreshold;
 
             //if cards are moving right, we need to check the positive threshold
             if (rightDrag)
             {
-                return t.position.x - _contentSpawner.ItemWidth * 0.5f > positiveThreshold;
+                return t.position.x - contentSpawner.ItemWidth * 0.5f > positiveThreshold;
             }
             else //otherwise we need to check the negative threshold
             {
-                return t.position.x + _contentSpawner.ItemWidth * 0.5f < negativeThreshold;
+                return t.position.x + contentSpawner.ItemWidth * 0.5f < negativeThreshold;
             }
         }
     }

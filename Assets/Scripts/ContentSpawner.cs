@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace Fleming.Assets.Scripts
 {
+
+    /// <summary>
+    /// Spawns the items in at their initial positions.
+    /// </summary>
     public class ContentSpawner : MonoBehaviour
     {
         [Header("Dimensions")]

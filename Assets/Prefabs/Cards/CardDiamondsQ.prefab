@@ -99,5 +99,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: CardDiamondsQ
       objectReference: {fileID: 0}
+    - target: {fileID: 8323048298196499036, guid: 3b0df6ec87968714a8c2eb68cc262e1a, type: 3}
+      propertyPath: cardData
+      value: 
+      objectReference: {fileID: 11400000, guid: c17b574f4ba876d4097d7b7d17e6c568, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b0df6ec87968714a8c2eb68cc262e1a, type: 3}

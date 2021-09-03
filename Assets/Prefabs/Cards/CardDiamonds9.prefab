@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 984aaf85fdff5954c9df22bc97d3d404, type: 3}
+    - target: {fileID: 5268120867452677649, guid: bea2230accab900448c0db7d4fd8f404, type: 3}
+      propertyPath: cardData
+      value: 
+      objectReference: {fileID: 11400000, guid: efb1e81d61234744facb68d609f189df, type: 2}
     - target: {fileID: 6008591770788840608, guid: bea2230accab900448c0db7d4fd8f404, type: 3}
       propertyPath: m_Name
       value: CardDiamonds9

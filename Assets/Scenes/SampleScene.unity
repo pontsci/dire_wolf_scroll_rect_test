@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db7bf88cc03de64dac76ea3d46bf120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _contentSpawner: {fileID: 1138918733}
+  contentSpawner: {fileID: 1138918733}
   boundsThreshold: 600
   lastDragPosition: {x: 0, y: 0}
   rightDrag: 0
@@ -473,6 +473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemWidth: 140
   Spacing: 10
+  AutoSort: 0
   prefabs:
   - {fileID: 3895127282244235541, guid: 48154ed82d4751b46945529b8f393912, type: 3}
   - {fileID: 1906389382431983353, guid: 698c452d3194e5b44a04490e001f9abf, type: 3}

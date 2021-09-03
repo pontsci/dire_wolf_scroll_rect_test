@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CardClubsQ
       objectReference: {fileID: 0}
+    - target: {fileID: 3686975723203594997, guid: e20c2f522e4dec447b76fb99360fa96e, type: 3}
+      propertyPath: cardData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7bfe7187b0cc24a47b3740179a6e9281, type: 2}
     - target: {fileID: 8186351032771920876, guid: e20c2f522e4dec447b76fb99360fa96e, type: 3}
       propertyPath: m_Sprite
       value: 

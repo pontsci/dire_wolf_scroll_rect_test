@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2873504635415624, guid: 698c452d3194e5b44a04490e001f9abf, type: 3}
+      propertyPath: cardData
+      value: 
+      objectReference: {fileID: 11400000, guid: d579f6669f8ca9f4ba149745e491bb4c, type: 2}
     - target: {fileID: 1906389382431983353, guid: 698c452d3194e5b44a04490e001f9abf, type: 3}
       propertyPath: m_Name
       value: CardHearts2

@@ -91,6 +91,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3202248198286154660, guid: 48154ed82d4751b46945529b8f393912, type: 3}
+      propertyPath: cardData
+      value: 
+      objectReference: {fileID: 11400000, guid: b8a60a1cad5e6c445ac3bc59c4fd02f3, type: 2}
     - target: {fileID: 3895127282244235541, guid: 48154ed82d4751b46945529b8f393912, type: 3}
       propertyPath: m_Name
       value: CardSpadesJ

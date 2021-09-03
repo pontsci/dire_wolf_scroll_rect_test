@@ -17,6 +17,9 @@ namespace Fleming.Assets.Scripts
         [Tooltip("The amount of space between cards.")]
         public float Spacing;
 
+        /// <summary>
+        /// The width of each item.
+        /// </summary>
         public float Width
         {
             get;
@@ -26,9 +29,12 @@ namespace Fleming.Assets.Scripts
         [Tooltip("Should the cards be sorted automatically?")]
         public bool AutoSort;
 
+        /// <summary>
+        /// The list of prefabs we'll spawn
+        /// </summary>
         [Header("Prefabs")]
-        //the list of prefabs we'll spawn
-        [SerializeField] private List<GameObject> prefabs;
+        [SerializeField] 
+        private List<GameObject> prefabs;
 
         /// <summary>
         /// Used for setting the initial positions of the cards.

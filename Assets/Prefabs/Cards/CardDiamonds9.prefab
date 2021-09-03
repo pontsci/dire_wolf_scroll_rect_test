@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 984aaf85fdff5954c9df22bc97d3d404, type: 3}
     - target: {fileID: 6008591770788840608, guid: bea2230accab900448c0db7d4fd8f404, type: 3}
       propertyPath: m_Name
-      value: Card
+      value: CardDiamonds9
       objectReference: {fileID: 0}
     - target: {fileID: 7054501429897694034, guid: bea2230accab900448c0db7d4fd8f404, type: 3}
       propertyPath: m_Pivot.x
@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7054501429897694034, guid: bea2230accab900448c0db7d4fd8f404, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7054501429897694034, guid: bea2230accab900448c0db7d4fd8f404, type: 3}
       propertyPath: m_AnchorMax.y
@@ -37,7 +37,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7054501429897694034, guid: bea2230accab900448c0db7d4fd8f404, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7054501429897694034, guid: bea2230accab900448c0db7d4fd8f404, type: 3}
       propertyPath: m_AnchorMin.y
@@ -81,11 +81,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7054501429897694034, guid: bea2230accab900448c0db7d4fd8f404, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -511
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7054501429897694034, guid: bea2230accab900448c0db7d4fd8f404, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -340
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7054501429897694034, guid: bea2230accab900448c0db7d4fd8f404, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

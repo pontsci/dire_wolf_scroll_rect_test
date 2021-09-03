@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5261083645370899474, guid: b5e7130aa2ae4a44db25b47b004d01f4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5261083645370899474, guid: b5e7130aa2ae4a44db25b47b004d01f4, type: 3}
       propertyPath: m_AnchorMax.y
@@ -33,7 +33,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5261083645370899474, guid: b5e7130aa2ae4a44db25b47b004d01f4, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5261083645370899474, guid: b5e7130aa2ae4a44db25b47b004d01f4, type: 3}
       propertyPath: m_AnchorMin.y
@@ -77,11 +77,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5261083645370899474, guid: b5e7130aa2ae4a44db25b47b004d01f4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -511
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5261083645370899474, guid: b5e7130aa2ae4a44db25b47b004d01f4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -340
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5261083645370899474, guid: b5e7130aa2ae4a44db25b47b004d01f4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -97,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8901169494031782880, guid: b5e7130aa2ae4a44db25b47b004d01f4, type: 3}
       propertyPath: m_Name
-      value: Card
+      value: CardSpadesA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5e7130aa2ae4a44db25b47b004d01f4, type: 3}

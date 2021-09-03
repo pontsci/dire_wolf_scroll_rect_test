@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 327096385006763751, guid: 48154ed82d4751b46945529b8f393912, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 327096385006763751, guid: 48154ed82d4751b46945529b8f393912, type: 3}
       propertyPath: m_AnchorMax.y
@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 327096385006763751, guid: 48154ed82d4751b46945529b8f393912, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 327096385006763751, guid: 48154ed82d4751b46945529b8f393912, type: 3}
       propertyPath: m_AnchorMin.y
@@ -73,11 +73,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 327096385006763751, guid: 48154ed82d4751b46945529b8f393912, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -511
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 327096385006763751, guid: 48154ed82d4751b46945529b8f393912, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -340
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 327096385006763751, guid: 48154ed82d4751b46945529b8f393912, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -93,7 +93,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3895127282244235541, guid: 48154ed82d4751b46945529b8f393912, type: 3}
       propertyPath: m_Name
-      value: Card
+      value: CardSpadesJ
       objectReference: {fileID: 0}
     - target: {fileID: 7980851070986670781, guid: 48154ed82d4751b46945529b8f393912, type: 3}
       propertyPath: m_Sprite

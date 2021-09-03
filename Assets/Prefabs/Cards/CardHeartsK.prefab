@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1927032399836921821, guid: 4886e96c20ed1334dbf05bfbc8e689b7, type: 3}
       propertyPath: m_Name
-      value: Card
+      value: CardHeartsK
       objectReference: {fileID: 0}
     - target: {fileID: 2898734915230068783, guid: 4886e96c20ed1334dbf05bfbc8e689b7, type: 3}
       propertyPath: m_Pivot.x
@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2898734915230068783, guid: 4886e96c20ed1334dbf05bfbc8e689b7, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2898734915230068783, guid: 4886e96c20ed1334dbf05bfbc8e689b7, type: 3}
       propertyPath: m_AnchorMax.y
@@ -33,7 +33,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2898734915230068783, guid: 4886e96c20ed1334dbf05bfbc8e689b7, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2898734915230068783, guid: 4886e96c20ed1334dbf05bfbc8e689b7, type: 3}
       propertyPath: m_AnchorMin.y
@@ -77,11 +77,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2898734915230068783, guid: 4886e96c20ed1334dbf05bfbc8e689b7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -511
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2898734915230068783, guid: 4886e96c20ed1334dbf05bfbc8e689b7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -340
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2898734915230068783, guid: 4886e96c20ed1334dbf05bfbc8e689b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

@@ -1,9 +1,10 @@
+using System;
 using System.Collections.Generic;
+using Fleming.Assets.Scripts.Enums;
 using UnityEngine;
 
 namespace Fleming.Assets.Scripts
 {
-
     /// <summary>
     /// Spawns the items in at their initial positions.
     /// </summary>
@@ -37,6 +38,61 @@ namespace Fleming.Assets.Scripts
             //set our width
             Width = GetComponent<RectTransform>().rect.width;
 
+            //if AutoSort is true, we try to sort by card data
+            if (AutoSort)
+            {
+                List<GameObject> sortedPrefabs = new List<GameObject>();
+                List<GameObject> hearts = new List<GameObject>();
+                List<GameObject> diamonds = new List<GameObject>();
+                List<GameObject> clubs = new List<GameObject>();
+                List<GameObject> spades = new List<GameObject>();
+
+                //add each suit to relevant list
+                foreach (GameObject prefab in prefabs)
+                {
+                    Card card = prefab.GetComponent<Card>();
+                    if (card == null)
+                    {
+                        Debug.LogError("No card component found on prefab! Make sure each item in the prefab list has a Card component.");
+                        return;
+                    }
+
+                    switch (card.cardData.Suit)
+                    {
+                        case Suits.Hearts:
+                            hearts.Add(prefab);
+                            break;
+                        case Suits.Diamonds:
+                            diamonds.Add(prefab);
+                            break;
+                        case Suits.Clubs:
+                            clubs.Add(prefab);
+                            break;
+                        case Suits.Spades:
+                            spades.Add(prefab);
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
+                }
+
+                //sort each suited listed by card value
+                hearts.Sort(SortByCardValue);
+                diamonds.Sort(SortByCardValue);
+                clubs.Sort(SortByCardValue);
+                spades.Sort(SortByCardValue);
+
+                //add them in the correct suit order according to the specified problem
+                sortedPrefabs.AddRange(hearts);
+                sortedPrefabs.AddRange(diamonds);
+                sortedPrefabs.AddRange(clubs);
+                sortedPrefabs.AddRange(spades);
+
+                //set our prefabs to the newly sorted ones
+                prefabs = sortedPrefabs;
+            }
+            
+            //populate the screen with cards
             for (int i = 0; i < prefabs.Count; i++)
             {
                 GameObject obj = Instantiate(prefabs[i], transform);
@@ -66,6 +122,36 @@ namespace Fleming.Assets.Scripts
         public void SetPrefabs(List<GameObject> prefabs)
         {
             this.prefabs = prefabs;
+        }
+
+        private int SortByCardValue(GameObject o1, GameObject o2)
+        {
+            Card card1 = o1.GetComponent<Card>();
+            Card card2 = o2.GetComponent<Card>();
+
+            //if the component doesn't exist, tell the dev
+            if (card1 == null || card2 == null)
+            {
+                Debug.LogError("No Card Component Exists...");
+                return 0;
+            }
+
+            //if the data isn't there, tell the dev
+            if (card1.cardData == null)
+            {
+                Debug.LogError("No ScriptableObject Data exists for this card: " + card1 + "\nObject: " + o1);
+                return 0;
+            }
+
+            //if the data isn't there, tell the dev
+            if (card2.cardData == null)
+            {
+                Debug.LogError("No ScriptableObject Data exists for this card: " + card2 + "\nObject: " + o2);
+                return 0;
+            }
+
+            //sort ascending
+            return card1.cardData.cardNumberInt.CompareTo(card2.cardData.cardNumberInt);
         }
     }
 }

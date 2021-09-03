@@ -473,15 +473,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemWidth: 140
   Spacing: 10
-  AutoSort: 0
+  AutoSort: 1
   prefabs:
-  - {fileID: 3895127282244235541, guid: 48154ed82d4751b46945529b8f393912, type: 3}
-  - {fileID: 1906389382431983353, guid: 698c452d3194e5b44a04490e001f9abf, type: 3}
-  - {fileID: 7637971040035492077, guid: 3b0df6ec87968714a8c2eb68cc262e1a, type: 3}
   - {fileID: 2978052016622313540, guid: e20c2f522e4dec447b76fb99360fa96e, type: 3}
-  - {fileID: 6064404930596498825, guid: 1310441dacbc71f4e81f31350a50144e, type: 3}
+  - {fileID: 7637971040035492077, guid: 3b0df6ec87968714a8c2eb68cc262e1a, type: 3}
+  - {fileID: 3895127282244235541, guid: 48154ed82d4751b46945529b8f393912, type: 3}
   - {fileID: 1280139021833611271, guid: 7f4c176c522f29c43bc4d3063d463503, type: 3}
+  - {fileID: 1906389382431983353, guid: 698c452d3194e5b44a04490e001f9abf, type: 3}
   - {fileID: 8901169494031782880, guid: b5e7130aa2ae4a44db25b47b004d01f4, type: 3}
+  - {fileID: 6064404930596498825, guid: 1310441dacbc71f4e81f31350a50144e, type: 3}
   - {fileID: 6008591770788840608, guid: bea2230accab900448c0db7d4fd8f404, type: 3}
 --- !u!1 &1801668888
 GameObject:

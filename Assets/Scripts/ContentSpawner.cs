@@ -22,6 +22,9 @@ namespace Fleming.Assets.Scripts
             set;
         }
 
+        [Tooltip("Should the cards be sorted automatically?")]
+        public bool AutoSort;
+
         [Header("Prefabs")]
         //the list of prefabs we'll spawn
         [SerializeField] private List<GameObject> prefabs;
